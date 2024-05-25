@@ -14,6 +14,8 @@ en:
               can_not_have_backordered_inventory_units: has backordered inventory units
   activerecord:
     attributes:
+      spree/paypal_checkout_order:
+        order_id: Order
       spree/address:
         label: Address name
         address1: Address
@@ -184,6 +186,12 @@ en:
         description: Description
         name: Name
     models:
+      spree/paypal_checkout_order:
+        one: PayPal Checkout
+        other: PayPal Checkout
+      spree/sales_tax_rate: 
+        one: Sales Tax Rate
+        other: Sales Tax Rates
       spree/address:
         one: Address
         other: Addresses
@@ -1814,3 +1822,10 @@ en:
     zone: Zone
     zones: Zones
     no_limits_zone: No Limits
+    zip_code: Zip Code
+    shipping_price_per_kg: Price Per Kg
+    paypal_checkout_order: PayPal Checkout
+    paypal_checkout_orders: PayPal Checkout
+    sales_tax_rates: Sales Tax Rates
+    paypal:
+      redirect: "After clicking “PayPal” button, you will be redirected to PayPal to complete your purchase securely."
