@@ -71,10 +71,12 @@ module Spree
           Spree::Calculator::Shipping::PerItem,
           Spree::Calculator::Shipping::PriceSack,
           Spree::Calculator::Shipping::DigitalDelivery,
+          Spree::Calculator::Shipping::PricePerKg,
         ]
 
         Rails.application.config.spree.calculators.tax_rates = [
-          Spree::Calculator::DefaultTax
+          Spree::Calculator::DefaultTax,
+          Spree::Calculator::SalesTax,
         ]
 
         Rails.application.config.spree.stock_splitters = [

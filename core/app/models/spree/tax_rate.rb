@@ -113,11 +113,15 @@ module Spree
               amount: amount_for_label
     end
 
+    def calculator_rate
+      calculator.try(:tax_rate) ? calculator.tax_rate : amount
+    end
+
     def amount_for_label
       return '' unless show_rate_in_label?
 
       ' ' + ActiveSupport::NumberHelper::NumberToPercentageConverter.convert(
-        amount * 100,
+        calculator_rate * 100,
         locale: I18n.locale,
         strip_insignificant_zeros: true
       )

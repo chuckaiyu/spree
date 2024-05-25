@@ -34,7 +34,7 @@ module Spree
       end
 
       def present_color_option(option)
-        "#{option.option_type.presentation}: #{option.name}"
+        "#{option.option_type.presentation}: #{option.name&.titleize}"
       end
 
       def present_option(option)

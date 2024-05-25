@@ -39,6 +39,10 @@ module Spree
 
     self.whitelisted_ransackable_attributes = ['presentation']
 
+    def title
+      name&.titleize
+    end
+
     private
 
     def touch_all_variants
