@@ -30,6 +30,10 @@ module Spree
 
         def default_locale
           @default_locale ||= current_store&.default_locale || Rails.application.config.i18n.default_locale || I18n.default_locale
+
+          if @default_locale != I18n.default_locale
+            I18n.default_locale = @default_locale
+          end
         end
 
         def current_locale
